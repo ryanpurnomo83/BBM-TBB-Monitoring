@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <style>
+        h4{
+            font-family: 'Oswald', sans-serif;
+        }
+        body { background-color: #FFFFFF; font-family: 'Open Sans', sans-serif; }
+        .shopping-cart { width: 750px; margin: 80px auto; background: #FFFFFF; border-radius: 6px; box-shadow: 1px 2px 3px rgba(0,0,0,0.6); padding: 20px; }
+        .item { display: flex; align-items: center; padding: 20px 0; border-bottom: 1px solid #E1E8EE; }
+        .item:last-child { border-bottom: none; }
+        .image img { width: 100px; }
+        .description { flex-grow: 1; padding: 0 20px; }
+        .quantity { display: flex; align-items: center; }
+        .quantity input { width: 40px; text-align: center; border: none; }
+        .buttons span { cursor: pointer; margin-right: 10px; }
+        .delete-btn { background: url('path/to/delete-icn.svg') no-repeat center; width: 18px; height: 18px; }
+        .like-btn { background: url('path/to/twitter-heart.png'); width: 60px; height: 60px; background-size: 2900%; }
+        .like-btn.is-active { animation: animate .8s steps(28) forwards; }
+        @keyframes animate { 0% { background-position: left; } 100% { background-position: right; } }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <h4 class="float-right">Tangki BBM BatuBara MONITORING</h4>
+    </header>
+    
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="item">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                            <span class="like-btn"></span>
+                        </div>
+                        <div class="image"><img src="ADMIN/image/1.jpg" alt="Item 1"></div>
+                        <div class="description">
+                            <span style="margin-left:10%;">LoRa Wireless Transceiver</span>
+                            <!-- <span style="display:block;">White</span> -->
+                        </div>
+                        <div class="total-price">Rp 2.760.000,00</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="item">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                            <span class="like-btn"></span>
+                        </div>
+                        <div class="image"><img src="ADMIN/image/2.jpg" alt="Item 2"></div>
+                        <div class="description">
+                            <span style="margin-left:10%;">Sensor Fuel Level</span>
+                            <!-- <span style="display:block;">White</span> -->
+                        </div>
+                        <div class="total-price">Rp 1.300.000,00</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    <script src="path/to/jquery.min.js"></script>
+    <script>
+        $('.minus-btn').click(function() {
+            let $input = $(this).next('input');
+            let value = parseInt($input.val()) - 1;
+            $input.val(value > 1 ? value : 1);
+        });
+
+        $('.plus-btn').click(function() {
+            let $input = $(this).prev('input');
+            let value = parseInt($input.val()) + 1;
+            $input.val(value < 100 ? value : 100);
+        });
+
+        $('.like-btn').click(function() {
+            $(this).toggleClass('is-active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <style>
+        h4{ font-family: "Oswald", sans-serif; }
+        body {
+
+            font-family: "Open Sans", sans-serif;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 80%;
+            height: auto;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .li-link{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white p-3">
+        <h4 class="float-right">Tangki BBM BatuBara MONITORING</h4>
+    </header>
+
+    <div class="container-fluid">
+    <div class="row">
+    <nav class="col-md-3 col-lg-2 bg-white border-right sidebar">
+        <div class="text-center mt-3">
+            <img src="ADMIN/image/profile-picture.png" class="rounded-circle" style="width:46px">
+            <br>
+            <br>
+            <p>Welcome</p>
+            <a href="#" class="btn btn-link"><i class="fa fa-envelope"></i></a>
+        </div>
+        <hr>
+        <h5>Edit Account Profile</h5>
+        <ul class="nav flex-column">
+            <li class="nav-link li-link">Notification</li>
+            <li class="nav-link li-link" onclick="window.location.href='/dashboard';">Dashboard</li>
+        </ul>
+    </nav>
+    
+        <div class="form-container">
+            <h2 class="mb-4">Edit Account Profile</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter new password">
+                </div>
+                <div class="mb-3">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm new password">
+                </div>
+                <div class="mb-3">
+                    <label for="profile-picture" class="form-label">Profile Picture</label>
+                    <input type="file" class="form-control" id="profile-picture">
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

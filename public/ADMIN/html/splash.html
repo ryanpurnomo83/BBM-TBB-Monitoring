@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Template</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;}
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
+        }
+        .overlay-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            margin-top: 10%;
+            margin-left: 5%;
+            z-index: 10;
+        }
+        .btn-square {
+            opacity: 0.4;
+            border-radius: 0; /* Menghilangkan border-radius untuk membuat tombol kotak */
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- Navigation bar with social media icons -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa fa-facebook-official"></i></a>
+        <a class="navbar-brand" href="#"><i class="fa fa-instagram"></i></a>
+        <a class="navbar-brand" href="#"><i class="fa fa-linkedin"></i></a>
+        <form class="form-inline ml-auto">
+            <button class="btn btn-outline-light" type="button"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</nav>
+
+<!-- Container for fixed size centered content -->
+<div class="container" style="max-width: 1600px;">
+
+    <!-- Header -->
+    <header class="text-center my-5">
+        <img src="ADMIN/image/PtPAC-logo.png" style="width: 90px;">
+        <span style="padding: 10px;"></span>
+        <img src="ADMIN/image/udinus-logo.png" style="width:50px;">
+        <span style="padding: 10px;"></span>
+        <img src="ADMIN/image/kedaireka-logo.jpg" style="width: 90px;">
+        <h1 class="display-3"><b>Tangki BBM BatuBara MONITORING</b></h1>
+        <h6>Welcome</h6>
+    </header>
+
+    <!-- Image header -->
+     
+    <div class="overlay-buttons text-center">
+        <button class="btn btn-light btn-lg my-2 btn-square" onclick="window.location.href = '/signup';">SIGNUP</button>
+        <button class="btn btn-light btn-lg my-2 btn-square" onclick="window.location.href='/signin';">SIGNIN</button>
+    </div>
+
+
+</div>
+
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script> <!-- Ganti dengan path ke file bootstrap.bundle.min.js yang diinstal offline -->
+</body>
+</html>
